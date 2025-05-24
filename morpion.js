@@ -5,7 +5,9 @@ $(function(){
         addMorpion($("body")).addClass("main").find(".case").addClass("main");
         $("div.case").each((i, el) => addMorpion($(el))).
             find(".morpion").addClass("sub").find(".case").addClass("sub");
-        $(".sub .case")
+        $(".sub .case").click(function(){
+            $(this).css("background-color" , "blue");
+        });
     }
 
     function addMorpion($el) {
@@ -24,3 +26,4 @@ $(function(){
     init();
 
 });
+
