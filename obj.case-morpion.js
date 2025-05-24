@@ -1,0 +1,8 @@
+
+
+class CaseMorpion{
+
+    joueurProprietaire;
+
+}
+
