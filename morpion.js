@@ -1,13 +1,21 @@
 
 $(function(){
 
+    var joueur1 = "blue";
+    var joueur2 = "red";
+    var joueurActif;
+
     function init() {
         addMorpion($("body")).addClass("main").find(".case").addClass("main");
         $("div.case").each((i, el) => addMorpion($(el))).
             find(".morpion").addClass("sub").find(".case").addClass("sub");
+
+
         $(".sub .case").click(function(){
-            $(this).css("background-color" , "blue");
+            $(this).css("background-color", joueurActif);
+            changeJoueur();
         });
+        changeJoueur();
     }
 
     function addMorpion($el) {
@@ -21,6 +29,10 @@ $(function(){
             }
         }
         return $tab;
+    }
+
+    function changeJoueur(){
+        joueurActif = ?
     }
 
     init();
