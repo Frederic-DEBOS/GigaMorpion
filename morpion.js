@@ -2,7 +2,7 @@
 $(function(){
 
     var joueur1 = "blue";
-    var joueur2 = "red";
+    var joueur2 = "green";
     var joueurActif;
 
     function init() {
@@ -12,8 +12,12 @@ $(function(){
 
 
         $(".sub .case").click(function(){
-            $(this).css("background-color", joueurActif);
-            changeJoueur();
+            var $caseCliquee = $(this);
+            var dejaCliquee = $caseCliquee.data("estCliquee");
+            if (!dejaCliquee){
+                $caseCliquee.data("estCliquee", true).data("joueur", joueurActif).css("background-color", joueurActif);
+                changeJoueur();
+            }
         });
         changeJoueur();
     }
@@ -39,6 +43,7 @@ $(function(){
         else{
             joueurActif = joueur1;
         }
+        $("body").css("background-color", 'light'+joueurActif);
     }
 
     init();

@@ -17,6 +17,7 @@ table.morpion {
     table-layout: fixed;
     border-collapse: separate;
     border-spacing: 10px;
+    background-color: white;
 }
 div.case{
     border: 5px solid black;
