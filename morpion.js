@@ -32,7 +32,13 @@ $(function(){
     }
 
     function changeJoueur(){
-        joueurActif = ?
+        if (joueurActif == joueur1){
+            joueurActif = joueur2;
+        }
+        else{
+            joueurActif = joueur1;
+        }
+
     }
 
     init();
